@@ -1,42 +1,63 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AuthProvider } from "./context/AuthContext";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import AuroraBackground from "./components/AuroraBackground";
 
-import Header from './components/Header';
-import Footer from './components/Footer';
+// User pages
+import Home from "./pages/Home";
+import Movies from "./pages/Movies";
+import MovieDetail from "./pages/MovieDetail";
+import Genres from "./pages/Genres";
+import About from "./pages/About";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Watch from "./pages/Watch";
 
-import Homepage from './Page/Homepage';
-import Movies from './Page/Movies';
-import Genres from './Page/Genres';
-import Aboutpage from './Page/Aboutpage';
-import MovieDetail from './Page/MovieDatail';
-
-import AdminLayout from './Page/Admin/AdminLayout';
-import Dashboard from './Page/Admin/Dashboard';
-import MovieManage from './Page/Admin/MovieManage';
-import AddMovie from './Page/Admin/AddMovie';
-import EditMovie from './Page/Admin/EditMovie';
+// Admin pages
+import AdminLayout from "./pages/admin/AdminLayout";
+import Dashboard from "./pages/admin/Dashboard";
+import ManageMovies from "./pages/admin/ManageMovies";
+import AddMovie from "./pages/admin/AddMovie";
+import EditMovie from "./pages/admin/EditMovie";
+import AdminGenres from "./pages/admin/Genres";
+import Users from "./pages/admin/Users";
 
 export default function App() {
   return (
-    <Router>
-      <Header />
-      <Routes>
-        {/* User Routes */}
-        <Route path="/" element={<Homepage />} />
-        <Route path="/movies" element={<Movies />} />
-        <Route path="/genres" element={<Genres />} />
-        <Route path="/about" element={<Aboutpage />} />
-        <Route path="/movie/:id" element={<MovieDetail />} />
+    <BrowserRouter>
+      <AuthProvider>
+        {/* Animated background */}
+        <AuroraBackground />
 
-        {/* Admin Routes */}
-        <Route path="/admin" element={<AdminLayout />}>
-          <Route index element={<Dashboard />} />
-          <Route path="movies" element={<MovieManage />} />
-          <Route path="add" element={<AddMovie />} />
-          <Route path="edit/:id" element={<EditMovie />} />
-        </Route>
-      </Routes>
-      <Footer />
-    </Router>
+        <div className="relative z-10">
+          <Routes>
+            {/* ===== USER ROUTES ===== */}
+            <Route path="/" element={<><Header /><Home /><Footer /></>} />
+            <Route path="/movies" element={<><Header /><Movies /><Footer /></>} />
+            <Route path="/movies/:id" element={<><Header /><MovieDetail /><Footer /></>} />
+            <Route path="/genres" element={<><Header /><Genres /><Footer /></>} />
+            <Route path="/about" element={<><Header /><About /><Footer /></>} />
+            
+            {/* Auth pages */}
+            <Route path="/login" element={<><Header /><Login /><Footer /></>} />
+            <Route path="/register" element={<><Header /><Register /><Footer /></>} />
+            
+            {/* Watch page (protected inside the component) */}
+            <Route path="/watch/:id" element={<><Header /><Watch /><Footer /></>} />
+
+            {/* ===== ADMIN ROUTES ===== */}
+            <Route path="/admin" element={<AdminLayout />}>
+              <Route index element={<Dashboard />} />
+              <Route path="movies" element={<ManageMovies />} />
+              <Route path="movies/add" element={<AddMovie />} />
+              <Route path="movies/edit/:id" element={<EditMovie />} />
+              <Route path="genres" element={<AdminGenres />} />
+              <Route path="users" element={<Users />} />
+            </Route>
+          </Routes>
+        </div>
+      </AuthProvider>
+    </BrowserRouter>
   );
 }

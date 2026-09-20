@@ -1,0 +1,123 @@
+[
+  {
+    "id": 1,
+    "title": "Avengers: Endgame",
+    "genre": "Action",
+    "year": 2019,
+    "rating": 8.4,
+    "duration": "181 min",
+    "director": "Anthony Russo, Joe Russo",
+    "cast": "Robert Downey Jr., Chris Evans, Scarlett Johansson",
+    "poster": "https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg",
+    "description": "The Avengers must stop Thanos from erasing half of all life in the universe."
+  },
+  {
+    "id": 2,
+    "title": "The Dark Knight",
+    "genre": "Action",
+    "year": 2008,
+    "rating": 9.0,
+    "duration": "152 min",
+    "director": "Christopher Nolan",
+    "cast": "Christian Bale, Heath Ledger, Aaron Eckhart",
+    "poster": "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+    "description": "Batman faces the Joker, a criminal mastermind who plunges Gotham into anarchy."
+  },
+  {
+    "id": 3,
+    "title": "Inception",
+    "genre": "Sci-Fi",
+    "year": 2010,
+    "rating": 8.8,
+    "duration": "148 min",
+    "director": "Christopher Nolan",
+    "cast": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page",
+    "poster": "https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg",
+    "description": "A thief who enters people's dreams to steal secrets gets a chance to redeem himself."
+  },
+  {
+    "id": 4,
+    "title": "The Hangover",
+    "genre": "Comedy",
+    "year": 2009,
+    "rating": 7.7,
+    "duration": "100 min",
+    "director": "Todd Phillips",
+    "cast": "Bradley Cooper, Ed Helms, Zach Galifianakis",
+    "poster": "https://i.pinimg.com/1200x/90/c7/95/90c7959638d61bdbc138efdd2cd173db.jpg",
+    "description": "Three friends wake up from a bachelor party in Las Vegas with no memory of the night before."
+  },
+  {
+    "id": 5,
+    "title": "The Notebook",
+    "genre": "Romance",
+    "year": 2004,
+    "rating": 7.8,
+    "duration": "123 min",
+    "director": "Nick Cassavetes",
+    "cast": "Ryan Gosling, Rachel McAdams",
+    "poster": "https://i.pinimg.com/1200x/89/8c/39/898c395da870257dbb1b01eac589f715.jpg",
+    "description": "A poor young man falls in love with a rich young woman, giving her a sense of freedom."
+  },
+  {
+    "id": 6,
+    "title": "The Conjuring",
+    "genre": "Horror",
+    "year": 2013,
+    "rating": 7.5,
+    "duration": "112 min",
+    "director": "James Wan",
+    "cast": "Vera Farmiga, Patrick Wilson",
+    "poster": "https://image.tmdb.org/t/p/w500/wVYREutTvI2tmxr6ujrHT704wGF.jpg",
+    "description": "Paranormal investigators work to help a family terrorized by a dark presence."
+  },
+  {
+    "id": 7,
+    "title": "Toy Story",
+    "genre": "Animation",
+    "year": 1995,
+    "rating": 8.3,
+    "duration": "81 min",
+    "director": "John Lasseter",
+    "cast": "Tom Hanks, Tim Allen",
+    "poster": "https://image.tmdb.org/t/p/w500/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg",
+    "description": "A cowboy doll is threatened when a new spaceman figure supplants him as top toy."
+  },
+  {
+    "id": 8,
+    "title": "The Shawshank Redemption",
+    "genre": "Drama",
+    "year": 1994,
+    "rating": 9.3,
+    "duration": "142 min",
+    "director": "Frank Darabont",
+    "cast": "Tim Robbins, Morgan Freeman",
+    "poster": "https://i.pinimg.com/1200x/0b/c7/77/0bc777effab49f5ab280da48fe288357.jpg",
+    "description": "Two imprisoned men bond over years, finding solace and eventual redemption."
+  },
+  {
+    "id": 9,
+    "title": "Interstellar",
+    "genre": "Sci-Fi",
+    "year": 2014,
+    "rating": 8.6,
+    "duration": "169 min",
+    "director": "Christopher Nolan",
+    "cast": "Matthew McConaughey, Anne Hathaway",
+    "poster": "https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+    "description": "A team of explorers travel through a wormhole to ensure humanity's survival."
+  },
+  {
+    "id": 10,
+    "title": "Forrest Gump",
+    "genre": "Drama",
+    "year": 1994,
+    "rating": 8.8,
+    "duration": "142 min",
+    "director": "Robert Zemeckis",
+    "cast": "Tom Hanks, Robin Wright",
+    "poster": "https://image.tmdb.org/t/p/w500/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg",
+    "description": "The presidencies of Kennedy and Johnson through the eyes of an Alabama man."
+  }
+
+]

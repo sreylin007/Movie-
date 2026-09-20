@@ -1,8 +1,187 @@
 @import "tailwindcss";
 
+
+
+/* ===== GLOBAL STYLES ===== */
+* {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0f172a;
+  background: #05050a;
   color: white;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== GLASSMORPHISM ===== */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ===== GRADIENT TEXT ===== */
+.gradient-text {
+  background: linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== GLOW EFFECTS ===== */
+.glow-purple { box-shadow: 0 0 40px rgba(168, 85, 247, 0.4); }
+.glow-pink { box-shadow: 0 0 40px rgba(236, 72, 153, 0.4); }
+.glow-cyan { box-shadow: 0 0 40px rgba(6, 182, 212, 0.4); }
+
+/* ===== CARD HOVER ===== */
+.card-hover {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-hover:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(168, 85, 247, 0.3);
+}
+
+/* ===== AURORA BACKGROUND ===== */
+.aurora {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.aurora-blob {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.4;
+  animation: float 25s infinite ease-in-out;
+}
+
+.blob-1 {
+  background: #a855f7;
+  top: -200px;
+  left: -200px;
+}
+
+.blob-2 {
+  background: #ec4899;
+  bottom: -200px;
+  right: -200px;
+  animation-delay: -10s;
+}
+
+.blob-3 {
+  background: #06b6d4;
+  top: 40%;
+  left: 30%;
+  animation-delay: -5s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(100px, -50px) scale(1.1); }
+  66% { transform: translate(-50px, 100px) scale(0.9); }
+}
+
+/* ===== FLOATING ANIMATION ===== */
+.float {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ===== PULSE DOT ===== */
+.pulse-dot {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+/* ===== ICON GLOW ===== */
+.icon-glow {
+  filter: drop-shadow(0 0 10px currentColor);
+}
+
+/* ===== BUTTON GLOW ===== */
+.btn-glow {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.btn-glow::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn-glow:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* ===== POSTER OVERLAY ===== */
+.poster-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.poster-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(5, 5, 10, 0.95) 0%, transparent 60%);
+}
+
+.poster-overlay img {
+  transition: transform 0.6s;
+}
+
+.poster-overlay:hover img {
+  transform: scale(1.1);
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a15;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #a855f7, #ec4899);
+  border-radius: 10px;
 }
